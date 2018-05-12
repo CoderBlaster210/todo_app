@@ -1,48 +1,50 @@
 <h1>
       <img class="company-logo" src="https://public.3.basecamp.com/p/iahgNshn1oKq98sWGf1q89Vo/uploads/511042491/download/CodeNow%20Logo.png"></img>
-      Workshop Todo List
+      <%= @todo_title %>
     </h1>
 
     <ul>
       <li>
         <input type="checkbox">
         <a href="show.html">Make the curriculum</a>
-        <span class="pomodoro-estimate">4 pomodoros</span>
+        <span class="<%= @todo_time_measure %>-estimate"><%= @todo_count %> <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
         Buy workshop supplies
-        <span class="pomodoro-estimate">3 Pomodoros</span>
+        <span class="<%= @todo_time_measure %>-estimate">3 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
         Meet with the volunteer trainers
-        <span class="pomodoro-estimate">2 Pomodoros</span>
+        <span class="<%= @todo_time_measure %>-estimate">2 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
         Order food for Saturday and Sunday
-        <span class="pomodoro-estimate">1 Pomodoro</span>
+        <span class="<%= @todo_time_measure %>-estimate">1 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
         Check pre-work assignments
-        <span class="pomodoro-estimate">2 Pomodoros</span>
+        <span class="<%= @todo_time_measure %>-estimate">2 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
         Send workshop location to all the students
-        <span class="pomodoro-estimate">1 Pomodoro</span>
+        <span class="<%= @todo_time_measure %>-estimate">1 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
         Have a great workshop
-        <span class="pomodoro-estimate">0 Pomodoros</span>
+        <span class="<%= @todo_time_measure %>-estimate">0 <%= @todo_time_measure %></span>
       </li>
     </ul>
 
     <div>
       <input type="text" placeholder="Add a new todo...">
-      <input type="number" placeholder="Pomodoro estimate...">
+      <input type="number" placeholder="<%= @todo_time_measure %> estimate...">
       <input id="add-new-todo-button" type="submit" value="Add todo">
     </div>
+    <%= "hello".reverse %>
+    
