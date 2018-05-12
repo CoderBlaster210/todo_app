@@ -1,3 +1,5 @@
+<% @priority = "low"%>
+
 <h1>
     <img class="company-logo" src="http://ww1.prweb.com/prfiles/2015/08/24/13706165/codenow%20logo%20large.png"/>    
 
@@ -5,40 +7,47 @@
     </h1>
 
     <ul>
+    <%
+    if @todo_count  > 3
+      @priority = "high"
+    elsif @todo_count == 2 || @todo_count == 3
+      @priority = "medium"
+    end
+    %>
       <li>
         <input type="checkbox">
-        <a href="show/1">Make the curriculum</a>
-        <span class="<%= @todo_time_measure %>-estimate"><%= @todo_count %> <%= @todo_time_measure %></span>
+        <a href="show/1/done">Make the curriculum</a>
+        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>"><%= @todo_count %> <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/2">Buy workshop supplies</a>
-        <span class="<%= @todo_time_measure %>-estimate">3 <%= @todo_time_measure %></span>
+        <a href = "show/2/done">Buy workshop supplies</a>
+        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">3 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/3">Meet with the volunteer trainers</a>
-        <span class="<%= @todo_time_measure %>-estimate">2 <%= @todo_time_measure %></span>
+        <a href = "show/3/done">Meet with the volunteer trainers</a>
+        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">2 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/4">Order food for Saturday and Sunday</a>
-        <span class="<%= @todo_time_measure %>-estimate">1 <%= @todo_time_measure %></span>
+        <a href = "show/4/done">Order food for Saturday and Sunday</a>
+        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">1 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/5">Check pre-work assignments</a>
-        <span class="<%= @todo_time_measure %>-estimate">2 <%= @todo_time_measure %></span>
+        <a href = "show/5/done">Check pre-work assignments</a>
+        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">2 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/6">Send workshop location to all the students</a>
-        <span class="<%= @todo_time_measure %>-estimate">1 <%= @todo_time_measure %></span>
+        <a href = "show/6/done">Send workshop location to all the students</a>
+        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">1 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/7">Have a great workshop</a>
-        <span class="<%= @todo_time_measure %>-estimate">0 <%= @todo_time_measure %></span>
+        <a href = "show/7/done">Have a great workshop</a>
+        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">0 <%= @todo_time_measure %></span>
       </li>
     </ul>
 

@@ -82,3 +82,12 @@ input[type="text"], input[type="number"]{
 #add-new-todo-button:active{
   box-shadow: 1px 1px 1px #90A4AE;
 }
+.high{
+  color: red;
+}
+.medium{
+  color: yellow;
+}
+.low{
+  color: green;
+}

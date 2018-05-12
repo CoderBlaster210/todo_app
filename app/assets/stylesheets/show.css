@@ -104,3 +104,9 @@ a{
 .low{
     color: green;
 }
+.true{
+  text-decoration: line-through;
+}
+.false{
+  
+}

@@ -12,7 +12,7 @@
             @priority = "medium"
         end
           %>
-      <h2 class="<%= @priority %>"><%= params[:id]%>. <%= @todo_task_title %></h2>
+      <h2 class="<%= @priority%> <%=@strike %>"><%= params[:id]%>. <%= @todo_task_title %></h2>
       <span><%= @todo_count %> Pomodoros</span>
       <h3>Description</h3>
       <p><%= @todo_description%></p>
