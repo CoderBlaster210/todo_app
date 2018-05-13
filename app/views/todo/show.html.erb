@@ -1,19 +1,20 @@
  <% @priority = 'low' %>
  <h1>
-      <%= @todo_title %>
+      <%= @todo_title_main %>
     </h1>
 
     <div>
       <input type="checkbox">
       <%
-        if @todo_count  > 3
+        if @todo_pomodoro_estimate  > 3
             @priority = "high"
-        elsif @todo_count == 2 || @todo_count == 3
+        elsif @todo_pomodoro_estimate == 2 || @todo_pomodoro_estimate == 3
             @priority = "medium"
         end
           %>
+          
       <h2 class="<%= @priority%> <%=@strike %>"><%= params[:id]%>. <%= @todo_task_title %></h2>
-      <span><%= @todo_count %> Pomodoros</span>
+      <span><%= @todo_pomodoro_estimate %> Pomodoros</span>
       <h3>Description</h3>
       <p><%= @todo_description%></p>
       <a href="#" id="edit-todo-button">Edit</a>
