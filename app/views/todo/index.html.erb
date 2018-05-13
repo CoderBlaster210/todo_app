@@ -16,45 +16,42 @@
     %>
       <li>
         <input type="checkbox">
-        <a href="show/1/done">Make the curriculum</a>
+        <a href="show/2">Make the curriculum</a>
         <span class="<%= @todo_time_measure %>-estimate <%= @priority %>"><%= @todo_count %> <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/2/done">Buy workshop supplies</a>
+        <a href = "show/3">Buy workshop supplies</a>
         <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">3 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/3/done">Meet with the volunteer trainers</a>
+        <a href = "show/4">Meet with the volunteer trainers</a>
         <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">2 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/4/done">Order food for Saturday and Sunday</a>
+        <a href = "show/5">Order food for Saturday and Sunday</a>
         <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">1 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/5/done">Check pre-work assignments</a>
+        <a href = "show/6">Check pre-work assignments</a>
         <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">2 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/6/done">Send workshop location to all the students</a>
+        <a href = "show/7">Send workshop location to all the students</a>
         <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">1 <%= @todo_time_measure %></span>
       </li>
       <li>
         <input type="checkbox">
-        <a href = "show/7/done">Have a great workshop</a>
+        <a href = "show/8">Have a great workshop</a>
         <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">0 <%= @todo_time_measure %></span>
       </li>
     </ul>
-
     <div>
-      <input type="text" placeholder="Add a new todo...">
-      <input type="number" placeholder="<%= @todo_time_measure %> estimate...">
-      <input id="add-new-todo-button" type="submit" value="Add todo">
+    <button class = "add-new-todo-button" id = "add-new-todo-button"> <a href="new">Add a new task</a></button>
     </div>
-    <%= "hello".reverse %>
+    
     

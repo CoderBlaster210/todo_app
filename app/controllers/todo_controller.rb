@@ -21,6 +21,17 @@ class TodoController < ApplicationController
         t.description = params['description']
         t.pomodoro_estimate = params['pomodoro_estimate']
         t.save
-        redirect_to "/todo/show/#{ t.id }" 
+        redirect_to "/todo/show/#{ t.id }/undone" 
+    end
+    def edit
+        @todo = Todo.find_by_id(params[:id])
+    end 
+    def update
+        t = Todo.find_by_id(params[:id])
+        t.title = params['title']
+        t.description = params['description']
+        t.pomodoro_estimate = params['pomodoro_estimate']
+        t.save
+        redirect_to "/todo/show/#{t.id}"
     end
 end
