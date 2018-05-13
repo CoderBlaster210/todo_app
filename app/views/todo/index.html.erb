@@ -7,48 +7,15 @@
     </h1>
 
     <ul>
-    <%
-    if @todo_count  > 3
-      @priority = "high"
-    elsif @todo_count == 2 || @todo_count == 3
-      @priority = "medium"
-    end
-    %>
+
+    <% @todos.each do |todo| %>
       <li>
         <input type="checkbox">
-        <a href="show/2">Make the curriculum</a>
-        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>"><%= @todo_count %> <%= @todo_time_measure %></span>
+        <a href="show/<%= todo.id %>"><%= todo.title %></a>
+        <span><%= todo.pomodoro_estimate %> Pomodoro(s)</span>
       </li>
-      <li>
-        <input type="checkbox">
-        <a href = "show/3">Buy workshop supplies</a>
-        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">3 <%= @todo_time_measure %></span>
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href = "show/4">Meet with the volunteer trainers</a>
-        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">2 <%= @todo_time_measure %></span>
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href = "show/5">Order food for Saturday and Sunday</a>
-        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">1 <%= @todo_time_measure %></span>
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href = "show/6">Check pre-work assignments</a>
-        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">2 <%= @todo_time_measure %></span>
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href = "show/7">Send workshop location to all the students</a>
-        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">1 <%= @todo_time_measure %></span>
-      </li>
-      <li>
-        <input type="checkbox">
-        <a href = "show/8">Have a great workshop</a>
-        <span class="<%= @todo_time_measure %>-estimate <%= @priority %>">0 <%= @todo_time_measure %></span>
-      </li>
+    <% end %>
+      
     </ul>
     <div>
     <button class = "add-new-todo-button" id = "add-new-todo-button"> <a href="new">Add a new task</a></button>

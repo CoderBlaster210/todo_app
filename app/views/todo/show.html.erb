@@ -18,6 +18,7 @@
       <h3>Description</h3>
       <p><%= @todo_description%></p>
       <button id = "edit-todo-button"> <a href="/todo/edit/<%= @todo.id %>" class="button edit-todo-button">Edit</a></button>
-      <a href="#" id="delete-todo-button">Delete</a>
+      <a href="/todo/destroy/<%= @todo.id %>" id="delete-todo-button">Delete</a>
       <a href="/todo/index.html" class="simple-link">Go back...</a>
     </div>
+    
